@@ -21,6 +21,7 @@
 
     <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> 
       to learn
+    <button>ユーザーを変更</button>
     <script>
       let myName = "Ume Tsuda"
       console.log("こんにちは "+myName+"さん")
@@ -30,6 +31,19 @@
       document.querySelector("html").addEventListener("click", function () {
         alert("痛っ! つつかないで!");
       });
+
+      function setUserName() {
+        const myName = prompt("あなたの名前を入力してください。");
+        localStorage.setItem("name", myName);
+        myHeading.textContent = `Mozilla はかっこいいよ、${myName} さん`;
+      }
+
+      let myButton = document.querySelector("button");
+      let myHeading = document.querySelector("h1");
+      myButton.onclick = () => {
+          setUserName();
+       };
+
 
     </script>
   </body>
