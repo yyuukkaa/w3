@@ -21,3 +21,12 @@ function setUserName() {
 myButton.onclick = function() {
   setUserName();
 }
+
+// Image switcher code
+
+let myImage = document.querySelector('img');
+
+myImage.onclick = function() {
+  let mySrc = myImage.getAttribute('src');
+  console.log("画像をクリックしました");
+}
