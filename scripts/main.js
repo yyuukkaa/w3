@@ -29,4 +29,9 @@ let myImage = document.querySelector('img');
 myImage.onclick = function() {
   let mySrc = myImage.getAttribute('src');
   console.log("画像をクリックしました");
+   if (mySrc === "images/firefox-icon.png") {
+    myImage.setAttribute("src", "images/firefox2.png");
+  } else {
+    myImage.setAttribute("src", "images/firefox-icon.png");
+  }
 }
