@@ -13,21 +13,9 @@ let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h1');
 
 function setUserName() {
-  let myName = prompt('Please enter your name.');
-  if(!myName) {
-    setUserName();
-  } else {
-    localStorage.setItem('name', myName);
-    myHeading.innerHTML = '先週の復習です, ' + myName + 'さん';
-  }
-}
-
-if(!localStorage.getItem('name')) {
-  setUserName();
-} else {
-  let storedName = localStorage.getItem('name');
-    myHeading.innerHTML = '先週の復習です, ' + myName + 'さん';
-
+  const myName = prompt("あなたの名前を入力してください。");
+  localStorage.setItem("name", myName);
+  myHeading.textContent = `Mozilla はかっこいいよ、${myName} さん`;
 }
 
 myButton.onclick = function() {
