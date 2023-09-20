@@ -22,10 +22,13 @@
     <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> 
       to learn
     <script>
-      const myHeading = document.querySelector("h1");
-      myHeading.textContent = "Hello world!";
       let myName = "Ume Tsuda"
       console.log("こんにちは "+myName+"さん")
+      const myHeading = document.querySelector("h1");
+      myHeading.textContent = "Hello world!";
+      document.querySelector("html").addEventListener("click", function () {
+          alert("痛っ! つつかないで!");
+       });
     </script>
   </body>
 </html>
