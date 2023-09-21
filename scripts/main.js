@@ -18,7 +18,14 @@ myButton.onclick = function() {
 
 let myImage = document.querySelector('img');
 
-myImage.onclick = function() {
-  let mySrc = myImage.getAttribute('src');
-  console.log("画像をクリックしました");
-}
+
+myImage.onclick = () => {
+  const mySrc = myImage.getAttribute("src");
+  if (mySrc === "images/firefox-icon.png") {
+    myImage.setAttribute("src", "images/firefox2.png");
+  } else {
+    myImage.setAttribute("src", "images/firefox-icon.png");
+  }
+};
+
+
